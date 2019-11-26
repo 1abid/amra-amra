@@ -3,7 +3,6 @@ import 'colors.dart';
 
 ThemeData buildAppTheme() {
   final ThemeData base = ThemeData.dark();
-
   return base.copyWith(
     accentColor: KAmraAmraOrangeAccent,
     primaryColor: KAmraAmraBluePrimary,
@@ -19,8 +18,7 @@ ThemeData buildAppTheme() {
     textTheme: _buildTextTheme(base.textTheme),
     primaryTextTheme: _buildTextTheme(base.primaryTextTheme),
     accentTextTheme: _buildTextTheme(base.accentTextTheme),
-    iconTheme: _customIconTheme(base.iconTheme)
-
+    iconTheme: _customIconTheme(base.iconTheme),
   );
 }
 

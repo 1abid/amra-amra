@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:amra_amra/theme/amraamra_app_theme.dart';
+import 'package:amra_amra/widgets/custom_appbar.dart';
 
-void main() => runApp(AmraAmra());
+void main() {
+  runApp(AmraAmra());
+}
 
 class AmraAmra extends StatelessWidget {
   @override
@@ -23,11 +26,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          title,
-        ),
-      ),
+      appBar: CustomAppBar(),
       body: Center(
           child: Text(
         'Hello World',
