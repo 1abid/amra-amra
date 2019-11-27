@@ -45,7 +45,21 @@ class CutCornerBorder extends OutlineInputBorder {
     }
     return super.lerpFrom(a, t);
   }
-  
+
+  @override
+  ShapeBorder lerpTo(ShapeBorder b, double t) {
+    if (b is CutCornerBorder) {
+      final CutCornerBorder outline = b;
+      return CutCornerBorder(
+        borderRadius: BorderRadius.lerp(borderRadius, outline.borderRadius, t),
+        borderSide: BorderSide.lerp(borderSide, outline.borderSide, t),
+        cut: cut,
+        gapPadding: outline.gapPadding,
+      );
+    }
+    return super.lerpTo(b, t);
+  }
+
   Path _notchedCornerPath(Rect center,
       [double start = 0.0, double extent = 0.0]) {
     final Path path = Path();

@@ -8,3 +8,5 @@ const KAmraAmraErrorRed = const Color(0xFFC5032B);
 
 const KAmraAmraSurfaceWhite = const Color(0xFFFFFBFA);
 const KAmraAmraBackgroundWhite = Colors.white;
+const KAmraAmraSentMessageBackground = const Color(0xFFFFFBFA);
+const KAmraAmraReceivedMessageBackground = const Color(0xFF4A6572);
