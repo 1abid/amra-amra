@@ -1,14 +1,13 @@
 
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:amra_amra/widgets/chatlist_widget.dart';
 
 import 'package:amra_amra/main.dart';
 
 void main() {
-  testWidgets('a dumb and unnecessary test to see how CI works ', (WidgetTester tester) async {
+  testWidgets('smoke test for main app entry UI', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(AmraAmra());
-    expect(find.text('Hello World'), findsOneWidget);
+    expect(find.byType(ChatListWidget),findsOneWidget);
   });
 }
