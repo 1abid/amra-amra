@@ -9,6 +9,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     final ThemeData _appTheme = Theme.of(context);
     final textPrimaryStyle = _appTheme.textTheme.headline.copyWith(
       color: KAmraAmraSurfaceWhite,
+      fontWeight: FontWeight.w200,
+      fontSize: 28.0
     );
     final textSecondaryStyle = _appTheme.textTheme.subtitle.copyWith(
       color: KAmraAmraOrangeAccent,
@@ -29,6 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         child: Container(
           color: KAmraAmraBluePrimary,
+          padding: EdgeInsets.only(top: 30.0),
           child: Row(
             children: <Widget>[
               Expanded(
@@ -51,7 +54,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                               ),
                             ),
                             Expanded(
-                              flex: 8,
+                              flex: 6,
                               child: Container(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,40 +79,43 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       SizedBox(
                         height: 5.0,
                       ),
-                      Container(
-                        height: 30,
-                        padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              'Photos',
-                              style: textPrimaryStyle.copyWith(fontSize: 16.0),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 5.0),
-                              child: VerticalDivider(
-                                width: 30,
-                                color: KAmraAmraSurfaceWhite,
+                      Expanded(
+                        flex: 3,
+                        child: Container(
+                          height: 30,
+                          padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                'Photos',
+                                style: textPrimaryStyle.copyWith(fontSize: 16.0),
                               ),
-                            ),
-                            Text(
-                              'Videos',
-                              style: textPrimaryStyle.copyWith(fontSize: 16.0),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 5.0),
-                              child: VerticalDivider(
-                                width: 30,
-                                color: KAmraAmraSurfaceWhite,
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5.0),
+                                child: VerticalDivider(
+                                  width: 30,
+                                  color: KAmraAmraSurfaceWhite,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Files',
-                              style: textPrimaryStyle.copyWith(fontSize: 16.0),
-                            ),
-                          ],
+                              Text(
+                                'Videos',
+                                style: textPrimaryStyle.copyWith(fontSize: 16.0),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5.0),
+                                child: VerticalDivider(
+                                  width: 30,
+                                  color: KAmraAmraSurfaceWhite,
+                                ),
+                              ),
+                              Text(
+                                'Files',
+                                style: textPrimaryStyle.copyWith(fontSize: 16.0),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
