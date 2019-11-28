@@ -65,7 +65,7 @@ TextTheme _buildTextTheme(TextTheme base) {
             fontSize: 12.0,
           ),
           overline: base.overline.copyWith(
-            fontWeight: FontWeight.w100,
+            fontWeight: FontWeight.w200,
             fontSize: 10.0,
           ))
       .apply(

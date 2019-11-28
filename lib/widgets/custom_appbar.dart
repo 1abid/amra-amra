@@ -47,9 +47,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                             Expanded(
                               flex: 2,
                               child: Center(
-                                child: Icon(
-                                  Icons.attach_file,
-                                  color: KAmraAmraSurfaceWhite,
+                                child: IconButton(
+                                  icon: Icon(Icons.attachment),
+                                  color: KAmraAmraBackgroundWhite,
                                 ),
                               ),
                             ),

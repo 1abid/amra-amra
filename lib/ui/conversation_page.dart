@@ -4,6 +4,9 @@ import 'package:amra_amra/widgets/chatlist_widget.dart';
 import 'package:amra_amra/widgets/input_widget.dart';
 
 class ConversationPage extends StatefulWidget {
+
+  const ConversationPage();
+
   @override
   _ConversationPageState createState() => _ConversationPageState();
 }

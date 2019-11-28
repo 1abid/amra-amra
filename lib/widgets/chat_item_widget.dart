@@ -56,7 +56,7 @@ class ChatItemWidget extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
           ],
         ),
       );
@@ -79,6 +79,17 @@ class ChatItemWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   margin: EdgeInsets.only(left: 10.0),
+                )
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.all(8.0),
+                  child: Text(
+                    '${DateFormat.yMMMMd("en_US").format(DateTime.now())}  ${DateFormat.jm().format(DateTime.now())}',
+                    style: _appTheme.textTheme.overline,
+                  ),
                 )
               ],
             )
