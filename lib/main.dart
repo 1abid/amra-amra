@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:amra_amra/theme/amraamra_app_theme.dart';
-import 'package:amra_amra/ui/conversation_page.dart';
 import 'package:amra_amra/ui/contact_chat_history.dart';
 void main() {
   runApp(AmraAmra());
