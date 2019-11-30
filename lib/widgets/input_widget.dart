@@ -40,7 +40,6 @@ class _InputWidgetState extends State<InputWidget> {
         ),
       ),
       child: Container(
-        height: 120.0,
         child: Row(
           children: <Widget>[
             Material(

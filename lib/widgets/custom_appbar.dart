@@ -2,25 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:amra_amra/theme/colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final double height = 120;
+  final double height = 80;
 
   @override
   Widget build(BuildContext context) {
     final ThemeData _appTheme = Theme.of(context);
     final textPrimaryStyle = _appTheme.textTheme.headline.copyWith(
-      color: KAmraAmraSurfaceWhite,
-      fontWeight: FontWeight.w200,
-      fontSize: 28.0
-    );
+        color: KAmraAmraSurfaceWhite,
+        fontWeight: FontWeight.w200,
+        fontSize: 16.0);
     final textSecondaryStyle = _appTheme.textTheme.subtitle.copyWith(
-      color: KAmraAmraOrangeAccent,
-      fontStyle: FontStyle.italic,
-    );
+        color: KAmraAmraOrangeAccent,
+        fontStyle: FontStyle.italic,
+        fontSize: 12.0);
 
     final double width = MediaQuery.of(context).size.width;
 
     return Material(
+      color: KAmraAmraBluePrimary,
       child: Container(
+        margin: EdgeInsets.only(top: 30.0),
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -31,7 +32,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         child: Container(
           color: KAmraAmraBluePrimary,
-          padding: EdgeInsets.only(top: 30.0),
+          padding: EdgeInsets.only(top: 10.0),
           child: Row(
             children: <Widget>[
               Expanded(
@@ -41,6 +42,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Container(
+                        padding: EdgeInsets.only(top: 10.0),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
@@ -76,21 +78,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
-                        height: 5.0,
-                      ),
                       Expanded(
                         flex: 3,
                         child: Container(
-                          height: 30,
-                          padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                          padding: EdgeInsets.fromLTRB(20, 0, 5, 0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Text(
                                 'Photos',
-                                style: textPrimaryStyle.copyWith(fontSize: 16.0),
+                                style: textPrimaryStyle.copyWith(
+                                  fontSize: 10.0,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5.0),
@@ -101,7 +102,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                               ),
                               Text(
                                 'Videos',
-                                style: textPrimaryStyle.copyWith(fontSize: 16.0),
+                                style: textPrimaryStyle.copyWith(
+                                  fontSize: 10.0,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5.0),
@@ -112,7 +116,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                               ),
                               Text(
                                 'Files',
-                                style: textPrimaryStyle.copyWith(fontSize: 16.0),
+                                style: textPrimaryStyle.copyWith(
+                                  fontSize: 10.0,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
                             ],
                           ),
@@ -127,7 +134,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: Container(
                   child: Center(
                     child: CircleAvatar(
-                      radius: 40,
+                      radius: 25,
                       backgroundImage:
                           Image.asset('assets/images/morty.jpg').image,
                     ),
