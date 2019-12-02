@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   intl: ^0.16.0
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -19,6 +20,15 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.7.4
+
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "assets/icons/happy.png"
+  image_path_android: "assets/icons/happy.png"
+  adaptive_icon_foreground: "assets/icons/happy.png"
+
 
 
 
@@ -30,16 +40,16 @@ flutter:
 
 
   fonts:
-  - family: Poppins
-    fonts:
-    - asset: assets/fonts/Poppins-Regular.ttf
-    - asset: assets/fonts/Poppins-Thin.ttf
-    - asset: assets/fonts/Poppins-Bold.ttf
-    - asset: assets/fonts/Poppins-BoldItalic.ttf
-    - asset: assets/fonts/Poppins-Light.ttf
-    - asset: assets/fonts/Poppins-Italic.ttf
-    - asset: assets/fonts/Poppins-Medium.ttf
-    - asset: assets/fonts/Poppins-SemiBold.ttf
-      weight: 400
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Thin.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+        - asset: assets/fonts/Poppins-BoldItalic.ttf
+        - asset: assets/fonts/Poppins-Light.ttf
+        - asset: assets/fonts/Poppins-Italic.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 400
 
 
