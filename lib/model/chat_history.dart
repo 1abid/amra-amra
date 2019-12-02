@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 final List<ChatHistory> chatHistories = [
   ChatHistory(
     assetName: 'assets/images/morty.jpg',
-    name: 'Mortt',
+    name: 'Morty',
     message: 'Is it Organic',
     time: 'date time',
   ),

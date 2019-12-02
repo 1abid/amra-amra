@@ -6,7 +6,7 @@ import 'dart:math';
 import 'package:amra_amra/widgets/menu_button.dart';
 import 'package:amra_amra/widgets/chat_history_sheet_header.dart';
 import 'package:amra_amra/model/chat_history.dart';
-import 'package:flutter/material.dart' as prefix0;
+import 'package:amra_amra/widgets/expanded_chat_history_row.dart';
 
 const double minHeight = 120;
 const double iconStartSize = 30; //<-- add edge values
@@ -118,6 +118,8 @@ class _ChatHistoryBottomSheetState extends State<ChatHistoryBottomSheet>
                   ),
                   for (ChatHistory chat in chatHistories)
                     _chatHistoryIcon(chat),
+                  for (ChatHistory chat in chatHistories)
+                    _createMessageRow(chat),
                 ],
               ),
             ),
@@ -193,6 +195,18 @@ class _ChatHistoryBottomSheetState extends State<ChatHistoryBottomSheet>
           ),
         ),
       ),
+    );
+  }
+
+  Widget _createMessageRow(ChatHistory chat) {
+    int index = chatHistories.indexOf(chat);
+    return ExpandedChatHistoryRow(
+      topMargin: iconTopMargin(index),
+      height: iconSize,
+      isVisible: _animationController.status == AnimationStatus.completed,
+      name: chat.name,
+      message: chat.message,
+      time: chat.time,
     );
   }
 }
