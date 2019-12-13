@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.16.0
+  infinite_listview: ^1.0.1+1
 
 
   # The following adds the Cupertino Icons font to your application.
